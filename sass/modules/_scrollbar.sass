@@ -1,0 +1,17 @@
+@use 'colors'
+@use "sass:color"
+   
+=config($width: 1rem, $color: colors.$accent-color, $track: colors.$light-theme)
+   ::-webkit-scrollbar
+      width: $width
+
+   ::-webkit-scrollbar-track
+      background: $track
+
+   ::-webkit-scrollbar-thumb
+      background: $color
+      border: solid .35rem $track
+      border-radius: 100vw
+      transition: .1s
+      &:hover
+         background: color.adjust($color, $lightness: 10%)
