@@ -6,7 +6,8 @@ Biblioteca Front-end concebida em Sass
       Autor: Alberto Frigatto de Andrade ferreira
       Versão: 1.1.2
       Data: 14/09/2022
-      Formação: Técnico em Desenvolvimento de Sistemas
+      Email: albertofrigatto.comercial@gmail.com
+      Linkedin: https://www.linkedin.com/in/alberto-frigatto-a72022251
       Editor: Visual Studio Code
       Plataforma: Windows 10 21H2 64bit
 
