@@ -1,294 +1,688 @@
-# Biblioteca-Bufos
-Biblioteca Front-end concebida em Sass
-
-  CRÉDITOS
-
-      Autor: Alberto Frigatto de Andrade ferreira
-      Versão: 1.1.2
-      Data: 14/09/2022
-      Email: albertofrigatto.comercial@gmail.com
-      Linkedin: https://www.linkedin.com/in/alberto-frigatto-a72022251
-      Editor: Visual Studio Code
-      Plataforma: Windows 10 21H2 64bit
-
-   INSTALAÇÃO
-
-      Inclua essa pasta dentro de css/.
-      Instale as extensões:
-         Live Sass Compiler (https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
-         Sass (https://marketplace.visualstudio.com/items?itemName=syler.sass-indented)
-      Adicione essa configuração ao settings.json de seu Visual Studio Code depois de ter instalado as extensões:
-
-      CSS comprimido (.min.css)
-
-         "liveSassCompile.settings.formats":[
-            {
-               "format": "compressed",
-               "extensionName": ".min.css",
-               "savePath": "~/.."
-            }
-         ],
-         "liveSassCompile.settings.autoprefix": [
-            "> 1%",
-            "last 2 versions"
-         ]
+# Frigatto's Library
 
-      CSS expandido (.css)
+Frigatto's Library é uma biblioteca Front-End que te ajuda a escrever seu estilo em ***SASS***
 
-         "liveSassCompile.settings.formats":[
-            {
-               "format": "expanded",
-               "extensionName": ".css",
-               "savePath": "~/.."
-            }
-         ],
-         "liveSassCompile.settings.autoprefix": [
-            "> 1%",
-            "last 2 versions"
-         ]
+<br>
 
-   ARQUIVOS
+## Créditos
 
-      /style.sass - estilo geral
-      /modules/_colors.sass - biblioteca de cores
-      /modules/_fonts.sass - biblioteca de fontes
-      /modules/_index.sass - intermédio das bibliotecas ao estilo geral
-      /modules/_position.sass - biblioteca de funções de posições
-      /modules/_pre-configs.sass - biblioteca de configurações iniciais
-      /modules/_scrollbar.sass - biblioteca da barra de rolagem
-      /modules/_utilities.sass - biblioteca com @mixin utilitários
+**Autor:** Alberto Frigatto de Andrade ferreira
 
+**Versão:** 1.2
 
+**Data:** 14/09/2022
 
-      /style.sass
+**Email:** albertofrigatto.comercial@gmail.com
 
-         Estilo geral.
-         Aqui constará a formatação do projeto em específico.
-         Inclui as bibliotecas por meio de "@use 'modules' as m" o que significa que o namespace das funções passa a ser 'm'
+**Linkedin:** [Clique aqui](https://www.linkedin.com/in/alberto-frigatto-a72022251)
 
+<br>
 
+## Tópicos
 
-      /modules/_colors.sass
+- [Instalação](#instalacao)
+- [Arquivos](#arquivos)
+	- [/style.sass](#style) - estilo geral
+	- [/modules/_colors.sass](#colors) - módulo de cores
+	- [/modules/_fonts.sass](#fonts) - módulo de fontes
+	- [/modules/_index.sass](#index) - hub dos módulos
+	- [/modules/_position.sass](#position) - módulo de funções de posições
+	- [/modules/_pre-configs.sass](#pre-configs) - módulo de configurações iniciais
+	- [/modules/_radius.sass](#radius) - módulo de arradondamento de borda
+	- [/modules/_scrollbar.sass](#scrollbar) - módulo da barra de rolagem
+	- [/modules/_utilities.sass](#utilities) - módulo com @mixin utilitários
 
-         Biblioteca de cores.
-         Usa a biblioteca 'sass:color'
-         Controla:
-            Os valores de suas variáveis de cor;
-            A criação de classes utilitárias para background e color com suas variáveis de cor;
-            A criação de classes utilitárias para background e color inserindo tons mais claros e mais escuros
-            para a cor fornecida pelo usuário.
+<br>
 
-         VARIÁVEIS
+## Instalação<span id="instalacao"></span>
 
-            $primary-dark: black !default
-            $secondary-dark: #2b2b2b !default
-            $primary-light: white !default
-            $secondary-light: #c5c5c5 !default
-            $dark-theme: #060018 !default
-            $light-theme: white !default
-            $accent-color: #002fff !default
-            $accent-color-2: #ffe100 !default
+Inclua essa pasta dentro de `css/`.
 
-         @mixin em /modules/_index.sass
+Instale as extensões em seu Visual Studio Code:
+- Live Sass Compiler - [Instalar](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
+- Sass - [Instalar](https://marketplace.visualstudio.com/items?itemName=syler.sass-indented)
 
-            +colors.custom($colors...) - OPCIONAL
+Adicione essa configuração ao `settings.json` de seu Visual Studio Code depois de ter instalado as extensões com base em sua preferência de compilação:
 
-            Gera classes utilitárias para color e background com base no valor passado pelo usuário.
-            As classes são geradas com base em tonalidades derivadas da cor original fornecidada pelo usuário.
-            A sintaxe das classes segue .color-(nome da cor)--(nível de tonalidade) e .bg-(nome da cor)--(nível de tonalidade). O nível de
-            tonalidade vai de 1 à 5, sendo 1 o tom mais claro e 5 o mais escuro.
-            As níveis de tonalidade possuem os seguintes ajustes de $lightness:
-               1: 20%
-               2: 10%
-               3: 0
-               4: -10%
-               5: -20%
-            Exemplos: .bg-yellow--2, .color-purple--5
+- CSS comprimido (.min.css)
 
-            ARGUMENTOS
+ ```json
+ "liveSassCompile.settings.formats":[
+    {
+       "format": "compressed",
+       "extensionName": ".min.css",
+       "savePath": "~/.."
+    }
+ ],
+ "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+ ]
+ ```
 
-               $colors... - list de 2 valores
-               
-               VALORES
+- CSS expandido (.css)
 
-                  $colors... - 1º valor: nome da cor, 2º valor: cor (nome, rgb(), rgba(), hsl(), hsla(), #hex)
+```json
+"liveSassCompile.settings.formats":[
+  {
+     "format": "expanded",
+     "extensionName": ".css",
+     "savePath": "~/.."
+  }
+],
+"liveSassCompile.settings.autoprefix": [
+  "> 1%",
+  "last 2 versions"
+]
+```
 
-         CLASSES UTILITÁRIAS
+<br>
 
-            COLOR
+## Arquivos<span id="arquivos"></span>
 
-               .color-(nome das variáveis)
+- [/style.sass](#style) - estilo geral
+- [/modules/_colors.sass](#colors) - módulo de cores
+- [/modules/_fonts.sass](#fonts) - módulo de fontes
+- [/modules/_index.sass](#index) - hub dos módulos
+- [/modules/_position.sass](#position) - módulo de funções de posições
+- [/modules/_pre-configs.sass](#pre-configs) - módulo de configurações iniciais
+- [/modules/_radius.sass](#radius) - módulo de arradondamento de borda
+- [/modules/_scrollbar.sass](#scrollbar) - módulo da barra de rolagem
+- [/modules/_utilities.sass](#utilities) - módulo com @mixin utilitários
 
-            BACKGROUND
+<br>
 
-               .bg-(nome das variáveis)
-               .bg-(nome das variáveis)_hover - classe que quando está no estado :hover torna a cor mais clara ou mais escura de acordo com qual
-               variável foi usada
+### Configuração
 
+---
 
+Ao incluir a biblioteca em seu projeto, você poderá configurá-la para atender as suas necessidades por meio de funções de configuração em `_index.sass`:
 
-      /modules/_fonts.sass
+<br>
+
+### 1. Cores<span id="custom-colors"></span>
+
+Caso queira criar classes de cores personalizadas basta chamar a função:
+
+```sass
++colors.custom-colors($colors...)
+```
+
+`$colors...` é o parâmetro à ser preenchido para incluir as cores customizadas
+
+Deve ser preenchido com 2 valores:
+
+1. Nome para as classes. Exemplo: `myPink`
+2. Valor da cor desejada. Exemplo: `#f1505f`
+
+#### Exemplo
+
+- Adicionando uma cor
+
+```sass
++colors.custom-colors(myPink #f5015f)
+```
+
+- Adicionando mais de uma cor
+
+```sass
++colors.custom-colors(blue #0020ff, my-green rgb(0, 255, 0))
+```
+
+<br>
+
+> :warning: Se o valor da cor tiver menos do que 30% ou mais de 70% de brilho, a função gerará um erro
+
+<br>
+
+A função criará classes utilitárias para `color` e `background` e com efeito de `:hover` para a cor fornecida e para tonalidades dela (mais claras e mais escuras).
+
+Tonalidades:
+
+- --1 - cor 20% mais clara
+- --2 - cor 10% mais clara
+- --3 - cor original
+- --4 - cor 10% mais escura
+- --5 - cor 20% mais escura
+
+Classes com hover
+
+`.nomeDaClasse_hover`
+
+#### Exemplo
+
+**_index.sass**
+```sass
++colors.custom-colors(myPink #f5015f)
+```
+**style.css**
+```css
+.color-myPink, .color-myPink_hover {
+  color: #f5015f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.color-myPink_hover:hover {
+  color: #d10151;
+}
+
+.bg-myPink, .bg-myPink_hover {
+  background: #f5015f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.bg-myPink_hover:hover {
+  background: #d10151;
+}
+
+.color-myPink--1, .color-myPink--1_hover {
+  color: #fe5e9c;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.color-myPink--1_hover:hover {
+  color: #ffa0c4;
+}
+
+.bg-myPink--1, .bg-myPink--1_hover {
+  background: #fe5e9c;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.bg-myPink--1_hover:hover {
+  background: #ffa0c4;
+}
+
+.color-myPink--2, .color-myPink--2_hover {
+  color: #fe2b7c;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.color-myPink--2_hover:hover {
+  color: #fe3a86;
+}
+
+.bg-myPink--2, .bg-myPink--2_hover {
+  background: #fe2b7c;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.bg-myPink--2_hover:hover {
+  background: #fe3a86;
+}
+
+.color-myPink--3, .color-myPink--3_hover {
+  color: #f5015f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.color-myPink--3_hover:hover {
+  color: #d10151;
+}
+
+.bg-myPink--3, .bg-myPink--3_hover {
+  background: #f5015f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.bg-myPink--3_hover:hover {
+  background: #d10151;
+}
+
+.color-myPink--4, .color-myPink--4_hover {
+  color: #c2014b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.color-myPink--4_hover:hover {
+  color: #b30145;
+}
+
+.bg-myPink--4, .bg-myPink--4_hover {
+  background: #c2014b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.bg-myPink--4_hover:hover {
+  background: #b30145;
+}
+
+.color-myPink--5, .color-myPink--5_hover {
+  color: #8f0138;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.color-myPink--5_hover:hover {
+  color: #4d001e;
+}
+
+.bg-myPink--5, .bg-myPink--5_hover {
+  background: #8f0138;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.bg-myPink--5_hover:hover {
+  background: #4d001e;
+}
+```
+
+<br>
+
+> A biblioteca também oferece cores padrão. Caso queira ver e alterar elas <a href="#colors">Clique aqui</a>
+
+<br>
+
+### 2. fontes<span id="include-fonts"></span>
+
+Caso queira incluir fontes ao seu projeto basta chamar a função:
+
+```sass
++fonts.config($fonts...)
+```
+
+`$fonts...` é o parâmetro à ser preenchido para incluir as fontes.
+
+Os valores aceitos referentes as fontes válidas são:
+- **lato** - para a fonte [Lato](https://fonts.google.com/specimen/Lato)
+- **roboto** - para a fonte [Roboto](https://fonts.google.com/specimen/Roboto)
+- **poppins** - para a fonte [Poppins](https://fonts.google.com/specimen/Poppins)
+- **open-sans** - para a fonte [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- **montserrat** - para a fonte [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- **ubuntu** - para a fonte [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
+- **dancing-script** - para a font [Dancing Script](https://fonts.google.com/specimen/Dancing+Script)
+- **roboto-mono** - para a fonte [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
+- **noto-sans** - para a fonte [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
+- **ibm-plex-mono** - para a fonte [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+
+#### Exemplo
+
+- Incluindo uma fonte:
+
+```sass
++fonts.config(poppins)
+```
+
+- Incluindo mais de uma fonte:
+
+```sass
++fonts.config(lato, ibm-plex-mono)
+```
+<br>
 
-         Biblioteca de fontes.
-         Controla quais fontes são incluídas no estilo com base na selecão do usuário.
-         Usa fontes do Google Fonts (https://fonts.google.com).
-         Fontes incluídas:
-            Lato;
-            Roboto;
-            Poppins;
-            Open Sans;
-            Montserrat;
-            Ubuntu;
-            Dancing Script.
+> :warning: Ao incluir uma ou mais fontes, a primeira será a fonte padrão do projeto
 
-         @mixin em /modules/_index.sass
+<br>
 
-            +fonts.config($fonts...) - OPCIONAL
+A função também gerará classes utilitárias referentes a(s) fonte(s) incluída(s) bem como seus pesos.
 
-            ARGUMENTOS
+#### Exemplo
 
-               $fonts... - list de 1 valor
+**_index.sass**
+```sass
++fonts.config(ubuntu)
+```
 
-               VALORES
+**style.css**
+
+```css
+* {
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
 
-                  $fonts... - Lato, Roboto, Poppins, Opens-Sans, Montserrat, Ubuntu, Dancing-Script
+.ubuntu--300 {
+  font-family: Ubuntu;
+  font-weight: 300;
+}
 
+.ubuntu--400 {
+  font-family: Ubuntu;
+  font-weight: 400;
+}
 
+.ubuntu--500 {
+  font-family: Ubuntu;
+  font-weight: 500;
+}
 
-      /modules/_index.sass
+.ubuntu--700 {
+  font-family: Ubuntu;
+  font-weight: 700;
+}
+```
 
-         Intermédio das bibliotecas ao estilo geral (/style.sass).
-         Inclui todas as bibliotecas nele mesmo;
+<br>
 
-         NAMESPACES (úteis)
+### 3. Scrollbar (barra de rolagem)<span id="include-scrollbar"></span>
 
-            colors - /modules/_colors.sass
-            fonts - /modules/_fonts.sass
-            scrollbar - /modules/_scrollbar.sass
+Caso queira personalizar a barra de rolagem do seu projeto basta chamar a função:
 
-         PREFIXOS
+```sass
++scrollbar.config($width: 1rem, $color: colors.$accent-color, $track: colors.$light-theme)
+```
 
-            pos-* - /modules/_position.sass
-            ut-* - /modules/_utilities.sass
+- `$width` - parâmetro que dita a largura da barra de rolagem
+  - Qualquer unidade de espaço (Valor padrão `1rem`)
+- `$color` - parâmetro que dita a cor da parte móvel da barra de rolagem
+  - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name` (valor: padrão `colors.$accent-color` (cor de destaque padrão do módulo [_colors.sass](#colors)))
+- `$track` - parâmetro que dita a cor dao traçado da barra de rolagem
+  - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name` (valor: padrão `colors.$accent-color` (cor de destaque padrão do módulo [_colors.sass](#colors)))
 
+### Exemplo
 
+função sem alteração de parâmetros
 
-      /modules/_position.sass
+```sass
++scrollbar.config
+```
 
-         Biblioteca para @mixin de posição (position) para um elemento.
-         Disponibiliza @mixin utilitários com base em 'position' e suas propriedades complementares 'top', 'right', 'bottom' e 'left'.
-         Recebe o prefixo pos-* em /modules/_index.sass.
+função com parâmetros personalizados
 
-         @mixin em /style.sass
+```sass
++scrollbar.config(10px, red, green)
+```
 
-            +m.pos-t-l($position, $top: 0, $left: 0) - OPCIONAL
-            +m.pos-t-r($position, $top: 0, $right: 0) - OPCIONAL
-            +m.pos-b-l($position, $bottom: 0, $left: 0) - OPCIONAL
-            +m.pos-b-r($position, $bottom: 0, $right: 0) - OPCIONAL
+<br>
 
-            ARGUMENTOS
+### style.sass<span id="style"></span>
 
-               $position - determina o tipo de posição do elemento
-               $top - define o espaço acima do elemento
-               $right - define o espaço a direita do elemento
-               $bottom - define o espaço abaixo do elemento
-               $left - define o espaço a esquerda do elemento
+---
 
-               VALORES
+Estilo geral. Aqui que você escreverá o estilo do seu projeto em específico
 
-                  $position: absolute, fixed, relative, static e sticky
-                  $top - qualquer unidade de espaço (valor padrão 0)
-                  $right - qualquer unidade de espaço (valor padrão 0)
-                  $bottom - qualquer unidade de espaço (valor padrão 0)
-                  $left - qualquer unidade de espaço (valor padrão 0)
+Inclui os módulos em:
 
+```sass
+@use 'modules' as fg
+```
 
+### Funções acessíveis dos módulos:
 
-      /modules/_pre-configs.sass
+- [_position.sass](#position)
+- [_radius.sass](#radius)
+- [_utilities.sass](#utilities)
 
-         Biblioteca com configurações iniciais genéricas para o estilo do documento.
-         Usa a biblioteca /modules/_colors.sass.
+### variáveis acessíveis
 
-         CONFIGURAÇÃO DE TEMA
+- Variáveis das cores padrão do módulo de cores [_colors.sass](#colors)
 
-            Se a tag <body> estiver sem class o documento utilizará o tema claro.
-            Se a tag <body> estiver com a classe .dark-theme o documento utilizará o tema escuro.
+<br>
 
+### _colors.sass<span id="colors"></span>
 
+---
 
-      /modules/_scrollbar.sass
+Módulo que controla as cores da biblioteca. Gera classes utilitárias para para `color` e `background` com base nas cores padrão (ver abaixo) e na função de cores customizadas
 
-         Biblioteca para a inserção ou customização de uma barra de rolagem para o documento.
-         Utiliza a biblioteca /modules/_colors.sass.
-         Utiliza a biblioteca 'sass:color'.
+ ### Variáveis padrão
+ 
+```sass
+$primary-dark:    black   !default
+$secondary-dark:  #2b2b2b !default
+$primary-light:   white   !default
+$secondary-light: #c5c5c5 !default
+$dark-theme:      #060018 !default
+$light-theme:     white   !default
+$accent-color:    #002fff !default
+$accent-color--2: #ffe100 !default
+```
 
-         @mixin em /modules/_index.sass
+### Classes utilitárias
 
-            +scrollbar.config($width: 1rem, $color: colors.$accent-color, $track: colors.$light-theme) - OPCIONAL
+#### Color
 
-            ARGUMENTOS
+```sass
+.color-(nome das variávies)
+.color-(nome das variávies)_hover // a cor fica mais clara ou mais escura com base em seu brilho
+```
 
-               $width - largura da barra de rolagem
-               $color - cor da móvel
-               $track - cor do traçado da barra
+#### Exemplo
 
-               VALORES
+```sass
+.color-primary-dark
+```
 
-                  $width - qualquer unidade de espaço (valor padrão 1rem)
-                  $color - cor (nome, rgb(), rgba(), hsl(), hsla(), #hex)
-                  $track - cor (nome, rgb(), rgba(), hsl(), hsla(), #hex)
+<br>
 
+#### Background
 
+```sass
+.bg-(nome das variávies)
+.bg-(nome das variávies)_hover // a cor fica mais clara ou mais escura com base em seu brilho
+```
 
-      /modules/_utilities.sass
+#### Exemplo
 
-         Biblioteca de @mixin utilitários.
-         Recebe o prefixo ut-* em /modules/_index.sass.
+```sass
+.bg-accent-color_hover
+```
 
-         @mixin em /style.sass
+#### Exemplo de variável em [style.sass](#style)
 
-            +m.ut-cut-img($width: 100%, $height: 100%, $fit: cover, $position: center)
+```sass
+fg.$primary-dark
+```
 
-               ARGUMENTOS
+### Alterando as variáveis
 
-                  $width - largura da imagem
-                  $height - largura da imagem
-                  $fit - modo de corte
-                  $position - posicão do corte
+Para alterar o valor das variáveis basta ir até o módulo [_index.sass](#index), adicionar a instrução with na linha `@forward 'colors'` e fornecer o nome da variável a ser mudada e o novo valor
 
-                  VALORES
+#### Exemplo
 
-                     $width - qualquer unidade de espaço (valor padrão 100%)
-                     $height - qualquer unidade de espaço (valor padrão 100%)
-                     $fit - valores de object-fit
-                     $position - valores de object-position
+```sass
+@forward 'colors' with ($dark-theme: #050505, $accent-color--2: #f5015f)
+```
 
-            +m.ut-flexbox($justify-content: flex-start,$align-items: stretch,$direction: row)
+### Função para cores customizadas
 
-               ARGUMENTOS
+Para ver como usar a função para cores customizadas [Clique aqui](#custom-colors)
 
-                  $justify-content - justifica os flex items
-                  $align-items - alinha os flex items
-                  $direction - direção do flex container
+### Namespace em [_index.sass](index)
 
-                  VALORES
+`colors.`
 
-                     $justify-content - valores de justify-content (valor padrão flex-start)
-                     $align-items - valores de align-items (valor padrão stretch)
-                     $direction - valores de flex-direction (valor padrão row)
+<br>
 
-            +m.ut-square($width, $color, $radius: 1rem)
+### _fonts.sass<span id="fonts"></span>
 
-               ARGUMENTOS
+---
 
-                  $width - largura do quadrado
-                  $color - cor do quadrado
-                  $radius - raio da borda
+Módulo que controla as fontes incluídas no projeto. Define a fonte padrão do documento e gera classes utilitárias com base nas fontes incluídas e seus pesos
 
-                  VALORES
+As fontes são pegas do [Google Fonts](https://fonts.google.com)
 
-                     $width - qualquer unidade de espaço
-                     $color - cor (nome, rgb(), rgba(), hsl(), hsla(), #hex)
-                     $radius - qualquer unidade de espaço (valor padrão 1rem)
+### Incluir fontes ao projeto
 
-Obrigado por usar minha biblioteca :)
+Para incluir fontes ao teu projeto [Clique aqui](#include-fonts)
+
+### Namespace em [_index.sass](#index)
+
+`fonts.`
+
+<br>
+
+### _index.sass<span id="index"></span>
+
+---
+
+Hub dos módulos
+
+Todos os módulos são incluídos nele
+
+### Namespaces para funções de configuração
+
+- `colors.` - [_colors.sass](#colors)
+- `fonts.` - [_fonts.sass](#fonts)
+- `scrollbar.` - [_scrollbar.sass](#scrollbar)
+
+### Prefixos para funções utilitárias
+
+- `pos-*` - [_position.sass](#position)
+- `ut-*` - [_utilities.sass](#utilities)
+
+<br>
+
+### _position.sass<span id="position"></span>
+
+---
+
+Módulo que disponibiliza funções utilitárias que giram em torno da propriedade `position` e suas propriedades satélites: `top`, `bottom`, `left` e `right`
+
+### Prefixo em [_index.sass](#index)
+
+`pos-*`
+
+### Funções em [style.sass](#style)
+
+```sass
++fg.pos-t-l($position, $top: 0, $left: 0)
+
++fg.pos-t-r($position, $top: 0, $right: 0)
+
++fg.pos-b-l($position, $bottom: 0, $left: 0)
+
++fg.pos-b-r($position, $bottom: 0, $right: 0)
+```
+
+#### Parâmetros das funções
+
+- `$position` - determina o tipo de posição do elemento
+  - Valores de `position`
+- `$top` - define o espaço acima do elemento
+  - Qualquer unidade de espaço (valor padrão 0)
+- `$right` - define o espaço a direita do elemento
+  - Qualquer unidade de espaço (valor padrão 0)
+- `$bottom` - define o espaço abaixo do elemento
+  - Qualquer unidade de espaço (valor padrão 0)
+- `$left` - define o espaço a esquerda do elemento
+  - Qualquer unidade de espaço (valor padrão 0)
+
+<br>
+
+### _pre-configs.sass<span id="pre-configs"></span>
+
+---
+
+Módulo com configurações iniciais genéricas para o projeto
+
+### Configuração de tema do projeto
+
+Se a tag `<body>` estiver sem classe o documento utilizará o tema claro (cor do tema claro: `colors.$light-theme` (variável de cor em [_colors.sass](#colors)))
+	
+Se a tag `<body>` estiver com a classe `.dark-theme` o documento utilizará o tema escuro (cor do tema escuro: `colors.$dark-theme` (variável de cor em [_colors.sass](#colors)))
+
+<br>
+
+### _radius.sass<span id="radius"></span>
+
+---
+
+Módulo que oferece funções utilitárias para arredondamento de borda
+
+### Funções em [style.sass](#style)
+
+```sass
++fg.radius-top($radius: .5rem)
+
++fg.radius-bottom($radius: .5rem)
+
++fg.radius-left($radius: .5rem)
+
++fg.radius-right($radius: .5rem)
+```
+
+### Parâmetros
+
+- `$radius` - arredondamento de borda
+  - Qualquer unidade de espaço (valor padrão `.5rem`)
+
+<br>
+
+### _scrollbar.sass<span id="scrollbar"></span>
+
+---
+
+Módulo que disponibiliza a inclusão e customização de uma barra de rolagem para o projeto
+
+### Cutomização da barra de rolagem
+
+Para inserir a barra de rolagem ao teu projeto [Clique aqui](#include-scrollbar)
+
+### Namespace em [_index.sass](#index)
+
+`scrollbar.`
+
+<br>
+
+### _utilities.sass<span id="utilities"></span>
+
+---
+
+Módulo para funções utilitárias diversas em [style.sass](#style)
+
+### Cortar imagem
+
+```sass
++fg.cut-img($width: 100%, $height: 100%, $position: center)
+```
+
+#### Parâmetros
+
+- `$width` - largura da imagem
+  - Qualquer unidade de espaço (valor padrão `100%`)
+- `$height` - largura da imagem
+  - Qualquer unidade de espaço (valor padrão `100%`)
+- `$position` - posicão do corte
+  - Valores de `object-position`
+
+<br>
+
+### Flexbox
+
+```sass
++fg.flexbox($justify-content: flex-start,$align-items: stretch,$direction: row)
+```
+
+#### Parâmetros
+
+- `$justify-content` - justifica os flex items
+  - Valores de `justify-content` (valor padrão `flex-start`)
+- `$align-items` - alinha os flex items
+  - Valores de `align-items` (valor padrão `stretch`)
+- `$direction` - direção do flex container
+  - Valores de `flex-direction` (valor padrão `row`)
+
+<br>
+
+### Quadrado
+
+```sass
++fg.square($width, $color, $radius: .4rem)
+```
+
+#### Parâmetros
+
+- `$width` - largura do quadrado
+  - Qualquer unidade de espaço
+- `$color` - cor do quadrado
+  - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name`
+- `$radius` - raio da borda
+  - Qualquer unidade de espaço (Valor padrão `.4rem`)
+
+<br>
+
+### Círculo
+
+```sass
++fg.circle($width, $color)
+```
+
+#### Parâmetros
+
+- `$width` - largura do círculo
+  - Qualquer unidade de espaço
+- `$color` - cor do círculo
+  - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name`
+
+<br>
+
+### Obrigado por usar minha biblioteca :)
