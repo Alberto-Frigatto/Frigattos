@@ -1,8 +1,8 @@
-=cut-img($width: 100%, $height: 100%, $fit: cover, $position: center)
+=cut-img($width: 100%, $height: 100%, $position: center)
    width: $width
    height: $height
    object:
-      fit: $fit
+      fit: cover
       position: $position
 
 =flexbox($justify-content: flex-start,$align-items: stretch,$direction: row)
@@ -15,4 +15,10 @@
    width: $width
    height: $width
    border-radius: $radius
+   background: $color
+
+=circle($width, $color)
+   width: $width
+   height: $width
+   border-radius: 50%
    background: $color

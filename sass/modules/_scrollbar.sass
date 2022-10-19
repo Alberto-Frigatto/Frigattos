@@ -14,4 +14,7 @@
       border-radius: 100vw
       transition: .1s
       &:hover
-         background: color.adjust($color, $lightness: 10%)
+         @if color.lightness($color)<20
+            background: color.adjust($color, $lightness: 10%)
+         @else
+            background: color.adjust($color, $lightness: -10%)

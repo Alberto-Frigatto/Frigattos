@@ -1,23 +1,25 @@
-@use 'colors'
-
-*
+*,
+::before,
+::after
    margin: 0
    padding: 0
    box-sizing: border-box
+   resize: none
 
 body
    min-height: 100vh
    overflow-x: hidden
-   background: colors.$light-theme
+   background: var(--light-theme)
    &.dark-theme
-      background: colors.$dark-theme
+      background: var(--dark-theme)
    
-input:focus,
-textarea:focus
+:focus
    outline: 0
-
-textarea
-   resize: none
 
 a
    text-decoration: none
+
+@for $i from 0 through 6
+   h#{$i}
+      font-weight: 400
+      margin-bottom: 2rem

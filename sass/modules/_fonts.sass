@@ -1,16 +1,45 @@
+@use 'sass:string'
+@use 'sass:list'
+
+$lato: lato Lato [100 300 400 700 900] 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'
+$roboto: roboto Roboto [100 300 400 500 700 900] 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
+$poppins: poppins, Poppins, [100 200 300 400 500 600 700 800 900], 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+$open-sans: open-sans, 'Open Sans', [300 400 500 600 700 800], 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'
+$montserrat: montserrat, Montserrat, [100 200 300 400 500 600 700 800 900], 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+$ubuntu: ubuntu, Ubuntu, [300 400 500 700], 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
+$dancing-script: dancing-script, 'Dancing Script', [400 500 600 700], 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap'
+$roboto-mono: roboto-mono, 'Roboto Mono',[100 200 300 400 500 600 700], 'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'
+$noto-sans: noto-sans, 'Noto Sans', [100 200 300 400 500 600 700 800 900], 'https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap'
+$ibm-plex-mono: ibm-plex-mono, 'IBM Plex Mono', [100 200 300 400 500 600 700], 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'
+
+
+$valid-fonts: [[$lato] [$roboto] [$poppins] [$open-sans] [$montserrat] [$ubuntu] [$dancing-script] [$roboto-mono] [$noto-sans] [$ibm-plex-mono]]
+
 =config($fonts...)
-    @each $font in $fonts
-        @if $font == Lato
-            @import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'
-        @if $font == Roboto
-            @import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
-        @if $font == Poppins
-            @import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-        @if $font == Open-Sans
-            @import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'
-        @if $font == Montserrat
-            @import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
-        @if $font == Ubuntu
-            @import 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
-        @if $font == Dancing-Script
-            @import 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap'
+   $i: 0
+
+   @each $font in $fonts
+      @if $font
+         $font: string.to-lower-case($font)
+
+         $errors: 0
+         @each $valid-font in $valid-fonts
+            @each $name, $font-family, $weights, $url in $valid-font
+               @if $font==$name
+                  @import url($url)
+
+                  @if $i==0
+                     *
+                        font-family: $font-family, Arial, Helvetica, sans-serif
+
+                  @each $weight in $weights
+                     .#{$name}--#{$weight}
+                        font:
+                           family: $font-family
+                           weight: $weight 
+               @else
+                  $errors: $errors + 1
+                  @if $errors==list.length($valid-fonts)
+                     @error "Fonte inválida"
+
+         $i: $i + 1
