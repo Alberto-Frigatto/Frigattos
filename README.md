@@ -96,7 +96,7 @@ Adicione essa configuração ao `settings.json` de seu Visual Studio Code depois
 
 ---
 
-Ao incluir a biblioteca em seu projeto, você poderá configurá-la para atender as suas necessidades por meio de funções de configuração em `_index.sass`:
+Ao incluir a biblioteca em seu projeto, você poderá configurá-la para atender as suas necessidades por meio de funções de configuração em [_index.sass](#index):
 
 <br>
 
