@@ -10,7 +10,7 @@ Frigatto's Library é uma biblioteca Front-End que te ajuda a escrever seu estil
 
 **Versão:** 1.2
 
-**Data:** 14/09/2022
+**Data:** 19/10/2022
 
 **Email:** albertofrigatto.comercial@gmail.com
 
