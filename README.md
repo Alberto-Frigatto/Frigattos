@@ -437,7 +437,7 @@ Para alterar o valor das variáveis basta ir até o módulo [_index.sass](#index
 
 Para ver como usar a função para cores customizadas [Clique aqui](#custom-colors)
 
-### Namespace em [_index.sass](index)
+### Namespace em [_index.sass](#index)
 
 `colors.`
 
