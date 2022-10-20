@@ -6,7 +6,7 @@ Frigatto's Library é uma biblioteca Front-End que te ajuda a escrever seu estil
 
 ## Créditos
 
-**Autor:** Alberto Frigatto de Andrade ferreira
+**Autor:** Alberto Frigatto de Andrade Ferreira
 
 **Versão:** 1.2
 
