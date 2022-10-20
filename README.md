@@ -211,7 +211,7 @@ Classes com hover
   background: #fe3a86;
 }
 
-... //Até a tonalidade --5
+/* ... Até a tonalidade --5 */
 ```
 
 <br>
