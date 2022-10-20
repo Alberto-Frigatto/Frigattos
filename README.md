@@ -211,59 +211,7 @@ Classes com hover
   background: #fe3a86;
 }
 
-.color-myPink--3, .color-myPink--3_hover {
-  color: #f5015f;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.color-myPink--3_hover:hover {
-  color: #d10151;
-}
-
-.bg-myPink--3, .bg-myPink--3_hover {
-  background: #f5015f;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.bg-myPink--3_hover:hover {
-  background: #d10151;
-}
-
-.color-myPink--4, .color-myPink--4_hover {
-  color: #c2014b;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.color-myPink--4_hover:hover {
-  color: #b30145;
-}
-
-.bg-myPink--4, .bg-myPink--4_hover {
-  background: #c2014b;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.bg-myPink--4_hover:hover {
-  background: #b30145;
-}
-
-.color-myPink--5, .color-myPink--5_hover {
-  color: #8f0138;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.color-myPink--5_hover:hover {
-  color: #4d001e;
-}
-
-.bg-myPink--5, .bg-myPink--5_hover {
-  background: #8f0138;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.bg-myPink--5_hover:hover {
-  background: #4d001e;
-}
+... //Até a tonalidade --5
 ```
 
 <br>
@@ -426,6 +374,19 @@ $accent-color:    #002fff !default
 $accent-color--2: #ffe100 !default
 ```
 
+### Semântica
+
+Semanticamente as variáveis devem ser usadas para:
+
+- `$primary-dark` - cor escura principal
+- `$secondary-dark` - cor escura secundária
+- `$primary-light` - cor clara principal
+- `$secondary-light` - cor clara secundária
+- `$dark-theme` - cor para o tema escuro do projeto
+- `$light-theme` - cor para o tema claro do projeto
+- `$accent-color` - cor  de destaque principal
+- `$accent-color--2` - cor  de destaque secundária 
+
 ### Classes utilitárias
 
 #### Color
@@ -517,7 +478,7 @@ Todos os módulos são incluídos nele
 ### Prefixos para funções utilitárias
 
 - `pos-*` - [_position.sass](#position)
-- `ut-*` - [_utilities.sass](#utilities)
+- `radius-*` - [_radius.sass](#radius)
 
 <br>
 
