@@ -539,6 +539,10 @@ Se a tag `<body>` estiver com a classe `.dark-theme` o documento utilizará o te
 
 Módulo que oferece funções utilitárias para arredondamento de borda
 
+### Prefixo em [_index.sass](#index)
+
+`radius-*`
+
 ### Funções em [style.sass](#style)
 
 ```sass
