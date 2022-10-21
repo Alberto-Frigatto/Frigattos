@@ -36,7 +36,7 @@ Frigatto's Library é uma biblioteca Front-End que te ajuda a escrever seu estil
 
 ## Instalação<span id="instalacao"></span>
 
-Inclua essa pasta dentro de `css/`.
+Inclua a pasta **sass** dentro de `css/`.
 
 Instale as extensões em seu Visual Studio Code:
 - Live Sass Compiler - [Instalar](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
