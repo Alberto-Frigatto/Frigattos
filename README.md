@@ -313,7 +313,7 @@ Caso queira personalizar a barra de rolagem do seu projeto basta chamar a funç�
 - `$color` - parâmetro que dita a cor da parte móvel da barra de rolagem
   - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name` (valor: padrão `colors.$accent-color` (cor de destaque padrão do módulo [_colors.sass](#colors)))
 - `$track` - parâmetro que dita a cor dao traçado da barra de rolagem
-  - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name` (valor: padrão `colors.$accent-color` (cor de destaque padrão do módulo [_colors.sass](#colors)))
+  - cores - `#hex`, `rgb()`, `rgba()`, `hsl()` ou `name` (valor: padrão `colors.$light-theme` (cor do tema claro do módulo [_colors.sass](#colors)))
 
 ### Exemplo
 
