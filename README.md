@@ -231,16 +231,16 @@ Caso queira incluir fontes ao seu projeto basta chamar a função:
 `$fonts...` é o parâmetro à ser preenchido para incluir as fontes.
 
 Os valores aceitos referentes as fontes válidas são:
-- **lato** - para a fonte [Lato](https://fonts.google.com/specimen/Lato)
-- **roboto** - para a fonte [Roboto](https://fonts.google.com/specimen/Roboto)
-- **poppins** - para a fonte [Poppins](https://fonts.google.com/specimen/Poppins)
-- **open-sans** - para a fonte [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- **montserrat** - para a fonte [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- **ubuntu** - para a fonte [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
-- **dancing-script** - para a font [Dancing Script](https://fonts.google.com/specimen/Dancing+Script)
-- **roboto-mono** - para a fonte [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
-- **noto-sans** - para a fonte [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
-- **ibm-plex-mono** - para a fonte [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+- `lato` - para a fonte [Lato](https://fonts.google.com/specimen/Lato)
+- `roboto` - para a fonte [Roboto](https://fonts.google.com/specimen/Roboto)
+- `poppins` - para a fonte [Poppins](https://fonts.google.com/specimen/Poppins)
+- `open-sans` - para a fonte [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- `montserrat` - para a fonte [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- `ubuntu` - para a fonte [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
+- `dancing-script` - para a font [Dancing Script](https://fonts.google.com/specimen/Dancing+Script)
+- `roboto-mono` - para a fonte [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
+- `noto-sans` - para a fonte [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
+- `ibm-plex-mono` - para a fonte [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
 
 #### Exemplo
 
@@ -392,8 +392,8 @@ Semanticamente as variáveis devem ser usadas para:
 #### Color
 
 ```sass
-.color-(nome das variávies)
-.color-(nome das variávies)_hover // a cor fica mais clara ou mais escura com base em seu brilho
+.color-(nome das variáveis)
+.color-(nome das variáveis)_hover // a cor fica mais clara ou mais escura com base em seu brilho
 ```
 
 #### Exemplo
@@ -407,8 +407,8 @@ Semanticamente as variáveis devem ser usadas para:
 #### Background
 
 ```sass
-.bg-(nome das variávies)
-.bg-(nome das variávies)_hover // a cor fica mais clara ou mais escura com base em seu brilho
+.bg-(nome das variáveis)
+.bg-(nome das variáveis)_hover // a cor fica mais clara ou mais escura com base em seu brilho
 ```
 
 #### Exemplo
