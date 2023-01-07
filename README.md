@@ -1,6 +1,6 @@
 <p align='center'>
   <img
-    src='https://lh3.googleusercontent.com/E3gjlVKsDAXZeSJTLeXPKMq70Yv-buQwHWWiHn6q4ipgoZXAjwD0gQf3_lsN_e0xQb-Vuko7BTy23790_c0NGM4WUR2Kf6QNUc2_5NVAqtieYDXGc5qOvd-ugi_8ONM0IHW6RkPdoI0VK7xymEHL7BS5yfg2lIIqmBOpuF-6xMbcfbxqY01V13C41qBM5896S1Cmy5KgyMn4UBaSXNRp-kBfIPmEMmgBIowBgXrpDAfDW6B1_BUBzsqo34c3zD2ELNQdtykYZXl9m6WTVBOLqI5o5dUEzIfpHHS7PD1DNeliDg91d07ZiFfs6ykOEgyhtiaBW87rKMat2pqGYVAFGlOvKnwd8U--kBsHGbAElLkqq7_gopK0OgtH_ZOtM73Goe_CpFn66xLB4BiFX9SUG8kBtXItMXuLecgM0Y5NPzZw7PbGPxkHu5L1FKzxKh7bbURDkh7KfoXqT0ZeO_Ote7HTICAXkrbwDQu_cKMqt2blNimX7_0Lt-zPIANGTvTHDRMKyHPX7cy9vLb5AuapTy6MoWp8md7c2XjsvLQVG-0O_tFNUkE5jo4wl45Dz8kOKlatF0IdPCgKCfe3pLbhAmuppNYie2Z2sQEEPysdsfjWBQO5VSmPFCtxtz1FmU7McVaO0WY1cDDPEiLONZptsqMIpcbY_FK7S018M365aL-RZZgXwxZecLaz7Ybb_aZ2oZs-clf15NQUfbrNljXEpeMPirPpoIE7LvMED2z8Vu4S_Us7C28tcllCgFpUbKyU2jNv2wAq0gY9CM1FCjfaHj_FcaAFRc46cFjXOnHWVhsJsj4gcJQsTxKdFCNWjG9XtEpXW57C-Lor6_lcok9jGUA6dJn7IAijKeUiXV-WxWQLPB0vlOtEZTcVXhawx7YZpZMZ8RLAPQ2pOdAipOIItQoWuJ389S688UDzFzKhGz-p5AXLgVMK47chfhdVbMxwj96GP1PD80lfEEWmyfJmGbbSF5-m3MadgfyGJWCJvjBiIcxBomzyPqaGt4obe0oaA0XPeW1dt1KDrL87MBu4avHrMw=s263-no?authuser=4'
+    src='./logo.png'
     style='filter: drop-shadow(0 0 12px #f5015f)'
     width='160'
   />
@@ -251,7 +251,7 @@ Creates a square
 @include frigattos.circle($width, $background);
 ```
 
-Creates a square
+Creates a circle
 
 **Parameters**
 
