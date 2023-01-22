@@ -1,7 +1,6 @@
 <p align='center'>
   <img
     src='./logo.png'
-    style='filter: drop-shadow(0 0 12px #f5015f)'
     width='160'
   />
 </p>
@@ -29,17 +28,19 @@
 
 ## Quick start
 
-download the library here via Github or npm
+download the library here via:
+
+- [Github](https://github.com/Alberto-Frigatto/Frigattos)
+
+```
+git clone https://github.com/Alberto-Frigatto/Frigattos.git
+```
+
+- [npm](https://www.npmjs.com/package/frigattos)
 
 ```
 npm i frigattos
 ```
-
-Install the SCSS compiler:
-
-- [npm]('https://www.npmjs.com/package/sass'): `npm i sass`
-- [chocolatey]('https://community.chocolatey.org/packages/sass'): `choco install sass`
-- homebrew: `brew install sass/sass/sass`
 
 In a SCSS file import the library:
 
@@ -65,7 +66,9 @@ The library itself will produce a basic setup resetting the style of HTML tags
 The library provides functions for border radius:
 
 ```scss
-@include frigattos.radius-top($radius);
+element {
+  @include frigattos.radius-top($radius);
+}
 ```
 
 Rounds the top border of the element
@@ -75,7 +78,9 @@ Rounds the top border of the element
 - **$radius**: length units
 
 ```scss
-@include frigattos.radius-bottom($radius);
+element {
+  @include frigattos.radius-bottom($radius);
+}
 ```
 
 Rounds the bottom border of the element
@@ -85,7 +90,9 @@ Rounds the bottom border of the element
 - **$radius**: length units
 
 ```scss
-@include frigattos.radius-left($radius);
+element {
+  @include frigattos.radius-left($radius);
+}
 ```
 
 Rounds the left border of the element
@@ -95,7 +102,9 @@ Rounds the left border of the element
 - **$radius**: length units
 
 ```scss
-@include frigattos.radius-right($radius);
+element {
+  @include frigattos.radius-right($radius);
+}
 ```
 
 Rounds the right border of the element
@@ -109,29 +118,37 @@ Rounds the right border of the element
 The library provides functions for flexbox:
 
 ```scss
-@include frigattos.center;
+element {
+  @include frigattos.center;
+}
 ```
 
 Turns the element into a flex container with centered items
 
 ```scss
-@include frigattos.column-center;
+element {
+  @include frigattos.column-center;
+}
 ```
 
 Turns the element into a column flex container with the items aligned to the center
 
 ```scss
-@include frigattos.column;
+element {
+  @include frigattos.column;
+}
 ```
 
 Turns the element into a column flex container
 
 ## Fonts
 
+The library provides a function for including and configuring fonts:
+
 Fonts available in the library:
 
 - **Sans serif**
-  - [Lato](https://fonts.google.com/specimen/Lato?query=lato) - Default
+  - [Lato](https://fonts.google.com/specimen/Lato?query=lato) - default of Sans serif
   - [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont)
   - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans?query=noto)
   - [Open sans](https://fonts.google.com/specimen/Open+Sans?query=open)
@@ -139,19 +156,17 @@ Fonts available in the library:
   - [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
   - [Ubuntu](https://fonts.google.com/specimen/Ubuntu?query=ubuntu)
 - **Serif**
-  - [Lora](https://fonts.google.com/specimen/Lora?query=lora) - default
+  - [Lora](https://fonts.google.com/specimen/Lora?query=lora) - default of Serif
   - [Merriweather](https://fonts.google.com/specimen/Merriweather?query=Merriweather)
   - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?query=Roboto+Slab)
   - [Source Serif Pro](https://fonts.google.com/specimen/Source+Serif+Pro?query=Source+Serif+Pro)
 - **Handwriting**
-  - [Dancing script](https://fonts.google.com/specimen/Dancing+Script?query=dancing) - default
+  - [Dancing script](https://fonts.google.com/specimen/Dancing+Script?query=dancing) - default of Handwriting
 - **Monospace**
-  - [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono?query=IBM+Plex+Mono) - default
+  - [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono?query=IBM+Plex+Mono) - default of Monospace
   - [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono?query=Roboto+Mono)
 
 > Fonts are taken from [Google Fonts](https://fonts.google.com)
-
-The library provides a function for including and configuring fonts:
 
 ```scss
 @include frigattos.include-fonts($fonts...);
@@ -217,16 +232,16 @@ Examples:
 ```scss
 @include frigattos.include-fonts(
   (
-    'name': 'noto sans',
-    'define': 'text'
+    name: 'noto sans',
+    define: 'text'
   ),
   (
-    'name': 'serif',
-    'define': 'headings'
+    name: 'serif',
+    define: 'headings'
   ),
   (
-    'name': 'roboto mono',
-    'define': 'code'
+    name: 'roboto mono',
+    define: 'code'
   )
 );
 ```
@@ -236,7 +251,9 @@ Examples:
 The library provides functions for geometric shapes:
 
 ```scss
-@include frigattos.square($width, $background, $radius: .4rem);
+element {
+  @include frigattos.square($width, $background, $radius: .4rem);
+}
 ```
 
 Creates a square
@@ -248,7 +265,9 @@ Creates a square
 - **$radius**: length units - default value: .4rem
 
 ```scss
-@include frigattos.circle($width, $background);
+element {
+  @include frigattos.circle($width, $background);
+}
 ```
 
 Creates a circle

@@ -6,157 +6,157 @@ $valid-fonts: (
   // Sans serif
 
   (
-    'name': 'Lato',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 700
+    name: 'Lato',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 700,
+      bold: 900
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap',
     'default-of-type': true
   ),
   (
-    'name': 'Montserrat',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 400,
-      'medium': 500,
-      'bold': 600
+    name: 'Montserrat',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
   ),
   (
-    'name': 'Noto Sans',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 400,
-      'medium': 500,
-      'bold': 600
+    name: 'Noto Sans',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap'
   ),
   (
-    'name': 'Open Sans',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 400,
-      'medium': 500,
-      'bold': 600
+    name: 'Open Sans',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'
   ),
   (
-    'name': 'Poppins',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 600
+    name: 'Poppins',
+    type: 'sans serif',
+    weights: (
+      regular: 300,
+      medium: 400,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
   ),
   (
-    'name': 'Roboto',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 700
+    name: 'Roboto',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 700
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
   ),
   (
-    'name': 'Ubuntu',
-    'type': 'sans serif',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 700
+    name: 'Ubuntu',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 700
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
   ),
 
   // Serif
 
   (
-    'name': 'Lora',
-    'type': 'serif',
-    'weights': (
-      'regular': 400,
-      'medium': 500,
-      'bold': 600
+    name: 'Lora',
+    type: 'serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap',
     'default-of-type': true
   ),
   (
-    'name': 'Merriweather',
-    'type': 'serif',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 700
+    name: 'Merriweather',
+    type: 'serif',
+    weights: (
+      regular: 300,
+      medium: 400,
+      bold: 700
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'
   ),
   (
-    'name': 'Roboto Slab',
-    'type': 'serif',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 600
+    name: 'Roboto Slab',
+    type: 'serif',
+    weights: (
+      regular: 400,
+      medium: 00,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap'
   ),
   (
-    'name': 'Source Serif Pro',
-    'type': 'serif',
-    'weights': (
-      'regular': 400,
-      'medium': 600,
-      'bold': 700
+    name: 'Source Serif Pro',
+    type: 'serif',
+    weights: (
+      regular: 400,
+      medium: 600,
+      bold: 700
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'
   ),
 
   // HandWriting
 
   (
-    'name': 'Dancing Script',
-    'type': 'handWriting',
-    'weights': (
-      'regular': 400,
-      'medium': 500,
-      'bold': 600
+    name: 'Dancing Script',
+    type: 'handWriting',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap',
     'default-of-type': true
   ),
 
   // Monospace
 
   (
-    'name': 'IBM Plex Mono',
-    'type': 'monospace',
-    'weights': (
-      'regular': 300,
-      'medium': 400,
-      'bold': 600
+    name: 'IBM Plex Mono',
+    type: 'monospace',
+    weights: (
+      regular: 300,
+      medium: 400,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap',
     'default-of-type': true
   ),
   (
-    'name': 'Roboto Mono',
-    'type': 'monospace',
-    'weights': (
-      'regular': 400,
-      'medium': 500,
-      'bold': 600
+    name: 'Roboto Mono',
+    type: 'monospace',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 600
     ),
-    'url': 'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'
+    url: 'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'
   )
 );
 
@@ -175,100 +175,91 @@ $valid-fonts: (
       @error '$fonts argument must be string or map';
     }
 
-    @if type-of($font) == string
+    @if type-of($font) == map
     {
-      $valid-fonts-search-result: false;
-
-      @each $valid-font in $valid-fonts
+      $map-properties: ('name', 'define');
+  
+      @each $map-property in $map-properties
       {
-        $font-input: string.to-lower-case($font);
-
-        @if $font-input == string.to-lower-case(map.get($valid-font, 'name'))
+        @if type-of(map.get($font, $map-property)) != string
             or
-            $font-input == string.to-lower-case(map.get($valid-font, 'type')) and
-            map.get($valid-font, 'default-of-type') == true
+            string.length(map.get($font, $map-property)) == 0
         {
-          $valid-fonts-search-result: true;
-
-          $url: map.get($valid-font, 'url');
-          
-          @import url($url);
-          
-          @if list.length($fonts) == 1
-          {
-            @include _set-font(
-              map.get($valid-font, 'name'),
-              map.get($valid-font, 'weights'),
-              'full typography'
-            );
-          }
+          @error 'The map must have the '#{$map-property}' property';
         }
       }
-
-      @if $valid-fonts-search-result == false
-      {
-        @error 'Invalid font';
-      }
     }
-    @else
+    
+    $valid-fonts-search-result: false;
+
+    @each $valid-font in $valid-fonts
     {
-      @if type-of(map.get($font, 'name')) != string
+      $font-lower: if(type-of($font) == string,
+        string.to-lower-case($font),
+        string.to-lower-case(map.get($font, 'name'))
+      );
+
+      $valid-font-name: string.to-lower-case(map.get($valid-font, 'name'));
+      $valid-font-type: string.to-lower-case(map.get($valid-font, 'type'));
+
+      @if $font-lower == $valid-font-name
           or
-          type-of(map.get($font, 'define')) != string
-          or
-          string.length(map.get($font, 'name')) == 0
-          or
-          string.length(map.get($font, 'define')) == 0
+          $font-lower == $valid-font-type and
+          map.get($valid-font, 'default-of-type')
       {
-        @error 'The font map must contain \'name\' and \'option\' properties with string values';
-      }
+        $valid-fonts-search-result: true;
 
-      $font-definition: string.to-lower-case(map.get($font, 'define'));
+        $valid-font-url: map.get($valid-font, 'url');
+        
+        @import url($valid-font-url);
 
-      @if $font-definition != 'full typography'and
-          $font-definition != 'text'and
-          $font-definition != 'headings'and
-          $font-definition != 'code'and
-          $font-definition != 'none'
-      {
-        @error 'Invalid option';
-      }
+        $valid-font-weights: map.get($valid-font, 'weights');
 
-      $valid-fonts-search-result: false;
-      
-      @each $valid-font in $valid-fonts
-      {
-        $font-input: string.to-lower-case(map.get($font, 'name'));
-
-        @if $font-input == string.to-lower-case(map.get($valid-font, 'name'))
-            or
-            $font-input == string.to-lower-case(map.get($valid-font, 'type')) and
-            map.get($valid-font, 'default-of-type') == true
+        @if type-of($font) == string and
+            list.length($fonts) == 1
         {
-          $valid-fonts-search-result: true;
-
-          $url: map.get($valid-font, 'url');
-
-          @import url($url);
+          @include _set-font(
+            $valid-font-name,
+            $valid-font-weights,
+            'full typography'
+          );
+        }
+        @else if type-of($font) == map
+        {
+          
+          $font-definition: string.to-lower-case(map.get($font, 'define'));
+        
+          @if $font-definition != 'full typography'and
+              $font-definition != 'text'and
+              $font-definition != 'headings'and
+              $font-definition != 'code'and
+              $font-definition != 'none'
+          {
+            @error 'Invalid option';
+          }
 
           @include _set-font(
-            map.get($valid-font, 'name'),
-            map.get($valid-font, 'weights'),
+            $valid-font-name,
+            $valid-font-weights,
             $font-definition
           );
         }
       }
-
-      @if $valid-fonts-search-result == false
-      {
-        @error 'Invalid font';
-      }
+    }
+  
+    @if $valid-fonts-search-result == false
+    {
+      @error 'Invalid font';
     }
   }
 }
 
 @mixin _set-font($name, $weights, $definition)
 {
+  $weight-regular: map.get($weights, 'regular');
+  $weight-medium: map.get($weights, 'medium');
+  $weight-bold: map.get($weights, 'bold');
+
   @if $definition != 'none'
   {
     @if $definition == 'full typography'
@@ -330,13 +321,13 @@ $valid-fonts: (
       u,
       var
       {
-        font-weight: map.get($weights, 'regular');
+        font-weight: $weight-regular;
       }
     
       b,
       strong
       {
-        font-weight: map.get($weights, 'bold');
+        font-weight: $weight-bold;
       }
     }
 
@@ -348,7 +339,7 @@ $valid-fonts: (
       {
         font: {
           family: $name;
-          weight: map.get($weights, 'regular');
+          weight: $weight-regular;
         }
       }
     }
@@ -376,11 +367,11 @@ $valid-fonts: (
         {
           @if $i <2
           {
-            font-weight: map.get($weights, 'bold');
+            font-weight: $weight-bold;
           }
           @else
           {
-            font-weight: map.get($weights, 'medium');
+            font-weight: $weight-medium;
           }
         }
       }
