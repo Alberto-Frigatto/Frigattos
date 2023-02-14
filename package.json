@@ -1,6 +1,6 @@
 {
   "name": "frigattos",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Frigatto'sis an intuitive and easy-to-use SCSS library to help you write your stylesheets, providing functions for font configuration, flexbox, position, etc",
   "main": "index.scss",
   "scripts": {
