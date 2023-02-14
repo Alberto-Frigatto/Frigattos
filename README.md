@@ -58,6 +58,7 @@ The library itself will produce a basic setup resetting the style of HTML tags
 - [Flexbox](#flexbox)
 - [Fonts](#fonts)
 - [Geometric shapes](#geometric-shapes)
+- [Images](#images)
 - [Position](#position)
 - [Scrollbar](#scrollbar)
 
@@ -148,12 +149,12 @@ The library provides a function for including and configuring fonts:
 Fonts available in the library:
 
 - **Sans serif**
-  - [Lato](https://fonts.google.com/specimen/Lato?query=lato) - default of Sans serif
+  - [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto) - default of Sans serif
+  - [Lato](https://fonts.google.com/specimen/Lato?query=lato)
   - [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mont)
   - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans?query=noto)
   - [Open sans](https://fonts.google.com/specimen/Open+Sans?query=open)
   - [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
-  - [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
   - [Ubuntu](https://fonts.google.com/specimen/Ubuntu?query=ubuntu)
 - **Serif**
   - [Lora](https://fonts.google.com/specimen/Lora?query=lora) - default of Serif
@@ -276,6 +277,25 @@ Creates a circle
 
 - **$width**: length units
 - **$background**: color
+
+## Images
+
+The library provides functions for images:
+
+```scss
+img {
+  @include frigattos.cut-img($width, $height, $fit: cover, $position: center);
+}
+```
+
+Cut the image
+
+**Parameters**
+
+- **$width**: length units
+- **$height**: length units
+- **$fit**: object-fit values - default value: cover
+- **$position**: object-position values - default value: center
 
 ## Position
 
