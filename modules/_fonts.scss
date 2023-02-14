@@ -3,8 +3,17 @@
 @use 'sass:string';
 
 $valid-fonts: (
-  // Sans serif
-
+  (
+    name: 'Roboto',
+    type: 'sans serif',
+    weights: (
+      regular: 400,
+      medium: 500,
+      bold: 700
+    ),
+    url: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap',
+    default-of-type: true
+  ),
   (
     name: 'Lato',
     type: 'sans serif',
@@ -13,8 +22,7 @@ $valid-fonts: (
       medium: 700,
       bold: 900
     ),
-    url: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap',
-    'default-of-type': true
+    url: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'
   ),
   (
     name: 'Montserrat',
@@ -57,16 +65,6 @@ $valid-fonts: (
     url: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
   ),
   (
-    name: 'Roboto',
-    type: 'sans serif',
-    weights: (
-      regular: 400,
-      medium: 500,
-      bold: 700
-    ),
-    url: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
-  ),
-  (
     name: 'Ubuntu',
     type: 'sans serif',
     weights: (
@@ -76,9 +74,6 @@ $valid-fonts: (
     ),
     url: 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'
   ),
-
-  // Serif
-
   (
     name: 'Lora',
     type: 'serif',
@@ -88,7 +83,7 @@ $valid-fonts: (
       bold: 600
     ),
     url: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap',
-    'default-of-type': true
+    default-of-type: true
   ),
   (
     name: 'Merriweather',
@@ -120,9 +115,6 @@ $valid-fonts: (
     ),
     url: 'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'
   ),
-
-  // HandWriting
-
   (
     name: 'Dancing Script',
     type: 'handWriting',
@@ -132,11 +124,8 @@ $valid-fonts: (
       bold: 600
     ),
     url: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap',
-    'default-of-type': true
+    default-of-type: true
   ),
-
-  // Monospace
-
   (
     name: 'IBM Plex Mono',
     type: 'monospace',
@@ -146,7 +135,7 @@ $valid-fonts: (
       bold: 600
     ),
     url: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap',
-    'default-of-type': true
+    default-of-type: true
   ),
   (
     name: 'Roboto Mono',
@@ -177,15 +166,15 @@ $valid-fonts: (
 
     @if type-of($font) == map
     {
-      $map-properties: ('name', 'define');
+      $required-map-properties: ('name', 'define');
   
-      @each $map-property in $map-properties
+      @each $required-map-property in $required-map-properties
       {
-        @if type-of(map.get($font, $map-property)) != string
+        @if type-of(map.get($font, $required-map-property)) != string
             or
-            string.length(map.get($font, $map-property)) == 0
+            string.length(map.get($font, $required-map-property)) == 0
         {
-          @error 'The map must have the '#{$map-property}' property';
+          @error 'The map must have the '#{$required-map-property}' property';
         }
       }
     }
