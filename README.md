@@ -21,7 +21,7 @@
 
 **Linkedin**: [Click Here](https://www.linkedin.com/in/alberto-frigatto-a72022251)
 
-## Table of contents
+## Table of Contents
 
 - [Quick start](#quick-start)
 - [Usage](#usage)
